@@ -56,11 +56,16 @@ h2 {
 .itme-radio:checked + .item-label > .item-img-box > img {
 	height: 25rem;
 	margin-bottom: 2rem;
-	transition: width 0.5s, height 0.5s, padding 0.5s;
+	transition: all 0.5s;
 }
 
 .itme-radio:checked + .item-label .item-label-box > .item-icon {
 	transform: rotate(45deg);
+	transition: transform 0.5s;
+}
+
+.itme-radio:not(checked) + .item-label .item-label-box > .item-icon {
+	transform: rotate(0deg);
 	transition: transform 0.5s;
 }
 
@@ -85,6 +90,14 @@ h2 {
 		width: 100%;
 	}
 
+	.item-label {
+		width: 100%;
+	}
+
+	.item-img-box img {
+		width: 100%;
+	}
+
 	.item-icon {
 		display: block;
 	}
@@ -102,10 +115,10 @@ h2 {
 	.item-label:hover .item-img-box img {
 		height: 25rem;
 		margin-bottom: 2rem;
-		transition: width 0.5s, height 0.5s, padding 0.5s;
+		transition: all 0.5s;
 	}
 
-	.item:hover .item-icon {
+	.item-label:hover .item-icon {
 		transform: rotate(45deg);
 		transition: transform 0.5s;
 	}
