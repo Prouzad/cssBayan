@@ -58,6 +58,9 @@ h2 {
 	margin-bottom: 2rem;
 	transition: all 0.5s;
 }
+.itme-radio:checked + .item-label > .item-label-box h2 {
+	color: #58a6ff;
+}
 
 .itme-radio:checked + .item-label .item-label-box > .item-icon {
 	transform: rotate(45deg);
